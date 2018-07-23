@@ -132,6 +132,7 @@ string PolynomialNB::toStringHex() {
 	BigInteger res, temp, aux;
 	for (int i = 0; i < length; i++) {
 		unsigned int t = vector[i];
+		//Reversing bits
 		t = ((t & 0x55555555) << 1) | ((t & 0xAAAAAAAA) >> 1);
 		t = ((t & 0x33333333) << 2) | ((t & 0xCCCCCCCC) >> 2);
 		t = ((t & 0x0F0F0F0F) << 4) | ((t & 0xF0F0F0F0) >> 4);
